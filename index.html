@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover">
+  <link rel="stylesheet" href="css/index.css">
+  <title>Banco Fintech</title>
+</head>
+<body>
+
+  <!-- PANTALLA 1: LOGIN -->
+  <div class="pantalla pantalla-login" id="pantallaLogin">
+    <h1>Banco Fintech</h1>
+    <input type="text" id="usuario" placeholder="Usuario">
+    <input type="password" id="contraseña" placeholder="Contraseña">
+    <button onclick="ingresar()">Ingresar</button>
+  </div>
+
+  <!-- PANTALLA 2: PANEL PRINCIPAL -->
+  <div class="pantalla" id="pantallaPanel">
+    <h2>Bienvenido, Cliente</h2>
+    <p>Saldo Total: <strong>$5,000</strong></p>
+    <div class="carteras">
+      <div class="cartera">
+        <h3>Cuenta Principal</h3>
+        <p>$3,500</p>
+      </div>
+      <div class="cartera">
+        <h3>Cuenta Secundaria</h3>
+        <p>$1,500</p>
+      </div>
+    </div>
+    <div class="opciones">
+      <button onclick="mostrar('pantallaServicios')">Pago de Servicios</button>
+      <button onclick="mostrar('pantallaOperaciones')">Operaciones</button>
+      <button onclick="mostrar('pantallaPerfil')">Mi Perfil</button>
+    </div>
+    <button class="btn-volver" onclick="volver()">Volver</button>
+    <div class="shape-bottom"></div>
+  </div>
+
+  <!-- PANTALLA 3: PAGO DE SERVICIOS -->
+  <div class="pantalla" id="pantallaServicios">
+    <h2>Pago de Servicios</h2>
+    <div class="subopciones">
+      <button>Servicios</button>
+      <button>Instituciones</button>
+      <button>Recarga Celular</button>
+    </div>
+    <button class="btn-volver" onclick="volver()">Volver</button>
+    <div class="shape-bottom"></div>
+  </div>
+
+  <!-- PANTALLA 4: OPERACIONES -->
+  <div class="pantalla" id="pantallaOperaciones">
+    <h2>Operaciones</h2>
+    <div class="subopciones">
+      <button>Entre mis cuentas</button>
+      <button>A otras cuentas</button>
+    </div>
+    <button class="btn-volver" onclick="volver()">Volver</button>
+    <div class="shape-bottom"></div>
+  </div>
+
+  <!-- PANTALLA 5: MI PERFIL -->
+  <div class="pantalla" id="pantallaPerfil">
+    <h2>Mi Perfil</h2>
+    <div class="subopciones">
+      <button>Editar Perfil</button>
+      <button>Cerrar Sesión</button>
+    </div>
+    <button class="btn-volver" onclick="volver()">Volver</button>
+    <div class="shape-bottom"></div>
+  </div>
+
+  <script src="js/index.js"></script>
+</body>
+</html>
